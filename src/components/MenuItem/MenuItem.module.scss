@@ -1,0 +1,8 @@
+.active {
+    color: #C7ECC3;
+
+    @media (min-width: 768px) {
+        color: #000000;
+        border-bottom: 2px solid #C7ECC3;
+    }
+}

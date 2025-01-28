@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+
+## Purpose
+
+Create a static Nextjs site with Tailwind css
+(thank you a Coding Latam) [`youtube`](https://www.youtube.com/watch?v=bf9ZVklSnL0)
+
 ## Getting Started
 
 First, run the development server:

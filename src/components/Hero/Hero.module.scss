@@ -1,0 +1,105 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+
+    .information {
+        padding-top: 50px;
+
+        p {
+            padding-top: 20px;
+            font-family: 'Inter';
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .headline {
+            z-index: -1;
+
+            span {
+                position: relative;
+            }
+
+            span::before {
+                position: absolute;
+                content: '';
+                bottom: 0px;
+                width: 100%;
+                margin-top: 30px;
+                height: 8px;
+                background-color: #C7ECC3;
+                z-index: -1;
+            }
+        }
+
+        @media (min-width: 768px) {
+            p {
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+        }
+    }
+
+    .signUp {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input[type="text"] {
+            color: #CDCDCD;
+            font-family: 'Inter';
+            text-align: center;
+            font-size: 18px;
+            line-height: 51px;
+            border: 1px solid #cecece;
+            border-radius: 32px;
+        }
+
+        input[type="button"] {
+            background-color: #4262FF;
+            color: #FFFFFF;
+            font-family: 'Inter';
+            font-size: 18px;
+            line-height: 51px;
+            border-radius: 32px;
+        }
+
+        p {
+            // padding-top: 20px;
+            font-family: 'Inter';
+            font-size: 14px;
+            line-height: 20px;
+            color: #a7a6af
+        }
+    }
+
+    .image {
+        margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 50px;
+
+        .textSection {
+            width: 45%;
+        }
+
+        .image {
+            width: 55%;
+        }
+
+        .information {
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .signUp {
+            padding-top: 60px;
+        }
+    }
+}

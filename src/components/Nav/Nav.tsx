@@ -1,17 +1,15 @@
 "use client";
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import styles from './Nav.module.scss';
 import { openSans, inter } from '@/utils';
 import Image from 'next/image';
 import { MenuItem } from '../MenuItem';
 
-export type NavProps = {
-	// types...
-}
+export type NavProps = unknown
 
-const Nav: React.FC<NavProps>  = ({}) => {
-	
+const Nav: React.FC<NavProps> = () => {
+
 	const pathname = usePathname();
 	const [menuIsVisible, setMenuIsVisible] = useState(false)
 	const toggleMenu = () => {
@@ -22,17 +20,17 @@ const Nav: React.FC<NavProps>  = ({}) => {
 	// Actualiza el ítem activo basado en la ruta actual
 	useEffect(() => {
 		if (pathname === '/') setActiveItem('products');
-			else if (pathname === '/solutions') setActiveItem('solutions');
-			else if (pathname === '/resources') setActiveItem('resources');
-			else if (pathname === '/enterprise') setActiveItem('enterprise');
-			else if (pathname === '/pricing') setActiveItem('pricing');
+		else if (pathname === '/solutions') setActiveItem('solutions');
+		else if (pathname === '/resources') setActiveItem('resources');
+		else if (pathname === '/enterprise') setActiveItem('enterprise');
+		else if (pathname === '/pricing') setActiveItem('pricing');
 	}, [pathname]);
 
 	// Estado para guardar el ítem activo
 	const [activeItem, setActiveItem] = useState('');
 
 	// Función para manejar el clic en un ítem del menú
-	const handleClick = (item) => {
+	const handleClick = (item: string) => {
 		setActiveItem(item);
 	};
 
@@ -45,35 +43,35 @@ const Nav: React.FC<NavProps>  = ({}) => {
 					<div className={styles.container}>
 						<div className={styles.menu}>
 							<ul className={openSans.className}>
-								<MenuItem 
+								<MenuItem
 									href="/products"
 									label="Products"
 									activeItem={activeItem}
 									onClick={handleClick}
-								 />
-								<MenuItem 
-									href="/solutions"
+								/>
+								<MenuItem
+									href="#solutions"
 									label="Solutions"
 									activeItem={activeItem}
 									onClick={handleClick}
 								/>
-								<MenuItem 
+								<MenuItem
 									href="/resources"
 									label="Resources"
 									activeItem={activeItem}
-									onClick={handleClick}								
+									onClick={handleClick}
 								/>
-								<MenuItem 
+								<MenuItem
 									href="/enterprise"
 									label="Enterprise"
 									activeItem={activeItem}
-									onClick={handleClick}								
+									onClick={handleClick}
 								/>
-								<MenuItem 
+								<MenuItem
 									href="/pricing"
 									label="Pricing"
 									activeItem={activeItem}
-									onClick={handleClick}								
+									onClick={handleClick}
 								/>
 							</ul>
 						</div>
@@ -125,7 +123,7 @@ const Nav: React.FC<NavProps>  = ({}) => {
 								onClick={handleClick}
 							/>
 							<MenuItem
-								href="/solutions"
+								href="#solutions"
 								label="Solutions"
 								activeItem={activeItem}
 								onClick={handleClick}
@@ -152,8 +150,8 @@ const Nav: React.FC<NavProps>  = ({}) => {
 					</div>
 					<span className={`${styles.burguer} icon icon-burguer`} onClick={toggleMenu}></span>
 				</div>
-			</div>			
- 		</div>
+			</div>
+		</div>
 	);
 };
 

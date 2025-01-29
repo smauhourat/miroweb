@@ -1,5 +1,6 @@
 .collab {
 
+
     .banner {
         margin-bottom: 60px;
     }
@@ -13,13 +14,14 @@
         margin-top: 20px;
         padding: .2rem;
         position: absolute;
-        transform: rotate(15deg);
+        transform: rotate(12deg);
         z-index: 0;
         font-size: 10px;
         font-weight: 500;
         padding-left: 20px;
         padding-right: 20px;
         border-radius: 7px;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
     }
 
     text-align: center;
@@ -28,7 +30,6 @@
         font-family: 'Inter';
         font-size: 38px;
         font-weight: 700;
-
     }
 
     .textCards {
@@ -67,4 +68,18 @@
         }
     }
 
+    .signUp {
+        margin-top: 30px;
+
+        input[type="button"] {
+            background-color: #4262FF;
+            color: #FFFFFF;
+            font-family: 'Inter';
+            font-size: 18px;
+            line-height: 51px;
+            border-radius: 32px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
 }

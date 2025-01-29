@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MenuItem.module.scss';
-import Link from 'next/link';
+
 
 export type MenuItemProps = {
 	href: string, 
 	label: string, 
-	activeItem: any, 
-	onClick: any
+	activeItem: React.ReactNode, 
+	onClick: (item: string) => void//React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
 }
 
 const MenuItem: React.FC<MenuItemProps>  = ({ href, label, activeItem, onClick }) => {

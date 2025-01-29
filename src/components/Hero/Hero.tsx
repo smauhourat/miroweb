@@ -3,11 +3,9 @@ import React from 'react';
 import styles from './Hero.module.scss';
 import Image from 'next/image';
 
-export type HeroProps = {
-	// types...
-}
+export type HeroProps = unknown
 
-const Hero: React.FC<HeroProps>  = ({}) => {
+const Hero: React.FC<HeroProps>  = () => {
 	return (
 		<div className={`${styles.hero} container mx-auto`}>
 			<div className={styles.textSection}>

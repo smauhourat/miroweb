@@ -2,15 +2,20 @@
 import React from 'react';
 import styles from './Collab.module.scss';
 import { TextCard } from '../TextCard';
+import { motion } from 'motion/react';
 
 export type CollabProps = unknown
 
 const Collab: React.FC<CollabProps>  = () => {
 	return (
 		<div className={`${styles.collab} container mx-auto`}>
- 			<div className={styles.banner}>
+ 			<motion.div
+				transition={{ duration: 0.1 }}
+				initial={{ opacity: 0, scale: 0 }}
+				animate={{ opacity: 1, scale: 1 }}			
+			className={styles.banner}>
 				<span className={styles.sticker}>YOUR IDEA START HERE</span>
-			</div>
+			</motion.div>
 			<div className={styles.titleSection}>
 				Collaborate without constraints
 			</div>

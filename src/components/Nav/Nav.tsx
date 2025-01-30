@@ -5,6 +5,7 @@ import styles from './Nav.module.scss';
 import { openSans, inter } from '@/utils';
 import Image from 'next/image';
 import { MenuItem } from '../MenuItem';
+import { motion } from 'motion/react';
 
 export type NavProps = unknown
 
@@ -113,7 +114,10 @@ const Nav: React.FC<NavProps> = () => {
 			)}
 			<div className={styles.navDesktop}>
 				<div className={styles.containerDesktop}>
-					<Image src="logo.svg" alt="logo" width={91} height={32} />
+					<motion.div whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.95 }}>
+						<Image src="logo.svg" alt="logo" width={91} height={32} />
+					</motion.div>
 					<div className={styles.menuDesktop}>
 						<ul className={inter.className}>
 							<MenuItem

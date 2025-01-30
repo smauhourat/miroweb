@@ -1,0 +1,20 @@
+.work {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+
+        .workText {
+            width: 45%;
+        }
+
+        .image {
+            width: 55%;
+        }
+    }
+}

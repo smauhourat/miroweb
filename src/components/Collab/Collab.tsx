@@ -16,7 +16,7 @@ const Collab: React.FC<CollabProps>  = () => {
 			className={styles.banner}>
 				<span className={styles.sticker}>YOUR IDEA START HERE</span>
 			</motion.div>
-			<div className={styles.titleSection}>
+			<div className="titleSection">
 				Collaborate without constraints
 			</div>
 			<div id="solutions" className={styles.textCards}>

@@ -12,6 +12,14 @@ html {
   gap: 40px
 }
 
+.titleSection {
+  font-family: 'Inter';
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.eot?njb1pd');

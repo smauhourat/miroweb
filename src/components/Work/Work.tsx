@@ -11,7 +11,7 @@ export type WorkProps = {
 const Work: React.FC<WorkProps>  = ({}) => {
 	return (
 		<div className={`${styles.work} container mx-auto`}>
-			<div>
+			<div className={styles.workText}>
 				<div className="titleSection">
 					Work together,
 					wherever you work
